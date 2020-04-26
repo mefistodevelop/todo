@@ -12,7 +12,7 @@ function App() {
         <Navbar />
       </header>
 
-      <div className="App__container">
+      <div className="container">
         <Route path="/home" render={() => <Home />} />
         <Route path="/about" render={() => <About />} />
       </div>
