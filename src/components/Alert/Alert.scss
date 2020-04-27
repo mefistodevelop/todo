@@ -9,3 +9,17 @@
 .hidden {
   display: none;
 }
+
+.alert-enter {
+  opacity: 0;
+}
+
+.alert-enter-active {
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.alert-exit-active {
+  opacity: 0;
+  transition: opacity .3s;
+}
