@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Notes.scss';
+import AlertContext from '../../context/alert/alertContext';
 
 const Notes = ({ notes, onRemove }) => {
+  const alert = useContext(AlertContext);
+  const handleRemove = (id) => {
+    onRemove(id).then(() => alert.showAlert('The note has removed', 'warning'));
+  };
   const notesItems = notes.map((note) => (
     <li className="list-group-item notes__item" key={note.id}>
       <div>
-        <p className="notes__item-title">
+        <b className="notes__item-title">
           {note.title}
-        </p>
+        </b>
         <small>{note.date}</small>
       </div>
       <button
         type="button"
         className="btn btn-outline-danger btn-sm"
-        onClick={() => onRemove(note.id)}
+        onClick={() => handleRemove(note.id)}
         >
           &times;
         </button>

@@ -13,9 +13,10 @@ const Form = () => {
     event.preventDefault();
 
     if (value.trim()) {
-      firebase.addNote(value.trim());
-      alert.showAlert('New note has added', 'success');
-
+      firebase
+        .addNote(value.trim())
+        .then(() => alert.showAlert('New note has added', 'success'));
+      
       setValue('');
     }
   };

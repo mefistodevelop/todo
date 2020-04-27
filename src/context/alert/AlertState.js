@@ -11,6 +11,7 @@ const AlertState = ({ children }) => {
       type: SHOW_ALERT,
       payload: { text, type },
     });
+    setTimeout(hideAlert, 3000);
   };
 
   const hideAlert = () => {
