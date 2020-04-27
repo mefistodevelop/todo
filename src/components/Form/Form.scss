@@ -6,12 +6,26 @@
   display: flex;
   margin-bottom: 1rem;
 
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
+
   &__alert {
     min-height: 60px;
+  }
+
+  &__input {
+    @media (max-width: 576px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__button {
     min-width: 100px;
     margin-left: 2rem;
+
+    @media (max-width: 576px) {
+      margin-left: 0;
+    }
   }
 }

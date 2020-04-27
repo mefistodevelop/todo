@@ -6,11 +6,11 @@ const Navbar = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
     <div className="Navbar__container">
       <span className="navbar-brand">Todo List App</span>
-      <ul className="navbar-nav">
-        <li className="nav-item">
+      <ul className="navbar-nav Navbar__list">
+        <li className="nav-item Navbar__item">
           <NavLink className="nav-link" to="/">Home</NavLink>
         </li>
-        <li className="nav-item">
+        <li className="nav-item Navbar__item">
           <NavLink className="nav-link" to="/about">About</NavLink>
         </li>
       </ul>
