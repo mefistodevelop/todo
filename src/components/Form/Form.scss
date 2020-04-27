@@ -1,7 +1,11 @@
+.form-wrapper {
+  max-width: 825px;
+}
+
 .form {
-  max-width: 1000px;
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
 
   &__input {
     max-width: 700px;

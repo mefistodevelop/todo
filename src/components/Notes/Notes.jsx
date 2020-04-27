@@ -1,6 +1,5 @@
 import React from 'react';
 import './Notes.scss';
-import Alert from '../Alert/Alert';
 
 const Notes = ({ notes }) => {
   const notesItems = notes.map((note) => (
@@ -14,8 +13,6 @@ const Notes = ({ notes }) => {
   ));
   return (
     <div className="notes">
-      <Alert message="New note has added!" />
-
       <ul className="list-group">
         {notesItems}
       </ul>
