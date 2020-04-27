@@ -1,21 +1,26 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import './Home.scss';
 import Form from '../Form/Form';
 import Notes from '../Notes/Notes';
+import FirebaseContext from '../../context/firebase/firebaseContext';
+import Spinner from '../Spinner/Spinner';
 
-const Home = (props) => {
-  const notes = [
-    {id: 1, title: 'note 1'},
-    {id: 2, title: 'note 2'},
-    {id: 3, title: 'note 3'},
-  ];
-  return (
+const Home = () => {
+  const { isLoading, notes, fetchNotes, removeNote } = useContext(FirebaseContext);
+
+  // eslint-disable-next-line
+  useEffect(() => { fetchNotes() }, []);
+
+  return (  
     <div className="home">
       <div className="home__form">
         <Form />
       </div>
       <div className="home__notes">
-        <Notes notes={notes} />
+        {isLoading
+          ? <Spinner />
+          : <Notes notes={notes} onRemove={removeNote} />
+        }
       </div>
     </div>
   );

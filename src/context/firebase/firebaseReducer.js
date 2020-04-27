@@ -18,6 +18,7 @@ const firebaseReducer = (state, action) => {
       return {
         ...state,
         notes: action.payload,
+        isLoading: false,
       };
 
     case REMOVE_NOTE:

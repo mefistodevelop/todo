@@ -22,6 +22,10 @@ const Form = () => {
 
   return (
     <div className="form-wrapper">
+      <div className="form__alert">
+        <Alert />
+      </div>
+
       <form className="form" onSubmit={handleSubmit}>
         <input
           className="form-control form-control-lg form__input"
@@ -31,9 +35,8 @@ const Form = () => {
           onChange={(e) => setValue(e.target.value)}
         />
 
-        <button type="submit" className="btn btn-primary mb-2">Add note</button>
+        <button type="submit" className="btn btn-primary mb-2 form__button">Add note</button>
       </form>
-      <Alert message="New note has added!" />
     </div>
   );
 };
