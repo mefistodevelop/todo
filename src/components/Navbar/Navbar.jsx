@@ -8,10 +8,10 @@ const Navbar = () => (
       <span className="navbar-brand">Todo List App</span>
       <ul className="navbar-nav">
         <li className="nav-item">
-          <NavLink className="nav-link" to="/home">Home</NavLink>
+          <NavLink className="nav-link" to="/">Home</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="about">About</NavLink>
+          <NavLink className="nav-link" to="/about">About</NavLink>
         </li>
       </ul>
     </div>
