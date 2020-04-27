@@ -1,0 +1,11 @@
+.Alert {
+  &__message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.hidden {
+  display: none;
+}
