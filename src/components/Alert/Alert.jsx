@@ -4,11 +4,12 @@ import AlertContext from '../../context/alert/alertContext';
 
 const Alert = () => {
   const { alert, hideAlert } = useContext(AlertContext);
+  if (!alert.isVisible) return null;
 
   return (
     <div className="Alert">
       <div className={`alert alert-${alert.type || 'primary'} Alert__message`}>
-        {alert.message}
+        {alert.text}
         <button
           type="button"
           className="close"
