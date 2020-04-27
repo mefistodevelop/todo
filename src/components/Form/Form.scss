@@ -1,0 +1,10 @@
+.form {
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+
+  &__input {
+    max-width: 700px;
+    margin-right: 2rem;
+  }
+}
