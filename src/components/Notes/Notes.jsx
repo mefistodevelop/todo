@@ -12,7 +12,7 @@ const Notes = ({ notes, onRemove }) => {
   const notesItems = notes.map((note) => (
     <CSSTransition key={note.id} classNames="note" timeout={800}>
       <li className="list-group-item notes__item">
-        <div>
+        <div className="notes__content-wrapper">
           <b className="notes__item-title">
             {note.title}
           </b>
