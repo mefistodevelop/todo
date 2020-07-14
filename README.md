@@ -4,6 +4,13 @@ The app for your notes and tasks.
 
 **Try it =>** [run Todo List App](https://todo-list-e9d0b.firebaseapp.com/)
 
+The app developed with:
+* React (CRA), hooks, context
+* SCSS
+* Bootstrap
+* axios
+* firebase
+
 
 ## Available Scripts
 
